@@ -1,0 +1,91 @@
+Daniel Nichols 
+CIS-221
+Assignment 2
+
+Using the provided sequence_test.cpp file.
+Which console menu key is:
+The following choices are available: 
+ !   Activate the start( ) function
+ +   Activate the advance( ) function
+ ?   Print the result from the is_item( ) function
+ C   Print the result from the current( ) function
+ P   Print a copy of the entire sequence
+ S   Print the result from the size( ) function
+ I   Insert a new number with the insert(...) function
+ A   Attach a new number with the attach(...) function
+ R   Activate the remove_current( ) function
+ Q   Quit this test program
+
+Test case 1:
+Enter choice: ?
+There is no current item.
+
+Enter choice: C
+There is no current item.
+
+Enter choice: S
+Size is 0.
+
+Enter choice: R
+test_sequence: sequence.cpp:138: void main_savitch_4::sequence::remove_current(): Assertion `is_item()' failed.
+
+Test case 2:
+Enter choice: +
+test_sequence: sequence.cpp:75: void main_savitch_4::sequence::advance(): Assertion `is_item()' failed.
+
+Test case 3:
+Enter choice: I
+Please enter a real number for the sequence: 4.7
+4.7 has been read.
+
+Enter choice: C
+Current item is: 4.7
+
+Enter choice: ?
+There is an item.
+
+Enter choice: a
+Please enter a real number for the sequence: 5
+5 has been read.
+
+Enter choice: c
+Current item is: 5
+
+Enter choice: s
+Size is 2.
+
+Enter choice: !
+
+Enter choice: c
+Current item is: 4.7
+
+Enter choice: +
+
+Enter choice: c
+Current item is: 5
+
+Enter choice: p
+4.7
+5
+
+Enter choice: r
+The current item has been removed.
+
+Enter choice: C
+There is no current item.
+
+Enter choice: p
+4.7
+
+Enter choice: q
+Ridicule is the best test of truth.
+
+Test case 4:
+
+Valgrind Testing: 
+LEAK SUMMARY:
+==2899==    definitely lost: 0 bytes in 0 blocks
+==2899==    indirectly lost: 0 bytes in 0 blocks
+==2899==      possibly lost: 0 bytes in 0 blocks
+==2899==    still reachable: 40 bytes in 1 blocks
+==2899==         suppressed: 0 bytes in 0 blocks
